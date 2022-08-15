@@ -1,0 +1,21 @@
+body {
+ font-family: 'Montserrat', sans-serif;
+}
+html {
+    background-color: #111010;
+}
+img {
+   position:absolute;
+   width: 150px;
+   top:65px
+}
+
+.main {
+   position:relative;
+}
+h1{
+ margin:100px 110px;
+ color:white;
+ line-height: 40px;
+ font-size:40px ;
+}

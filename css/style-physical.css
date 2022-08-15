@@ -1,0 +1,242 @@
+@font-face {
+    font-family:charter-regular;
+    src: url("/fonts/charter-regular.otf");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family:charter-bold;
+    src: url("/fonts/charter-bold.otf");
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family:charter-bold-italic;
+    src: url("/fonts/charter-bold-iltalic.otf");
+    font-style: italic;
+    font-weight: bold;
+}
+@font-face {
+    font-family:charter-italic;
+    src: url("/fonts/charter-italic.otf");
+    font-style: italic;
+    font-weight: 400;
+}
+
+:root {
+    --gray30:#212121ff;
+    --gray20:#212429;
+    --gray10:#616161;
+}
+body {
+    color:var(--gray30);
+    font-family: 'Roboto', sans-serif;
+    /* font-family:charter-regular; */
+    margin:0;
+}
+
+header {
+    /* width: 90vw; */
+    font-size: 16px;
+    font-weight: normal;
+    color:var(--gray10);
+    width: 188px;
+    /* position:relative; */
+    /* top:100px; */
+    /* background-color: bisque; */
+    z-index: 1;
+    position:absolute;
+    /* background-color: antiquewhite; */
+    top:64px;
+    /* bottom: 0; */
+    /* right:0; */
+    left:-232px;
+    /* position: fixed; */
+    /* position:sticky */
+    
+}
+
+header li {
+    margin-bottom: 16px;
+    color: var(--gray20);
+}
+
+header a {
+    color:var(--gray10);
+    text-decoration: none;
+}
+header a:hover{
+    color: var(--gray30)
+}
+a {
+    color:var(--gray30);
+}
+nav details summary {
+    font-weight: bold;
+}
+
+
+hr {
+    margin: 64px 0;
+    /* border: #616161; */
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: normal;
+    /* font-size: 3.75em; */
+    margin-top:64px;
+    margin-bottom: 16 px;
+    /* border: 1px solid pink; */
+}
+
+
+.debug {
+    /* border: 2px solid blue; */
+    /* outline: 20px solid pink; */
+    /* box-shadow: 0px 0px 0px 60px pink; */
+    /* border-radius: 1px; */
+
+}
+
+/* .title { */
+    /* height:100px; */
+    /* width:100px; */
+    /* margin:200px; */
+/* } */
+
+/* h1 ~ p {
+    margin-bottom: 64px;
+} */
+
+h2 {
+    font-size: 2em;
+    font-weight: normal;
+    margin: 64px 0 40px;
+}
+h3 {
+    font-size:1.5em ;
+    font-weight: normal;
+    margin-top:16px;
+    margin-bottom: 24px;
+    position:sticky;
+    top:0;
+    background:white;
+}
+
+h3::after {
+    content:"";
+    width:80px;
+    height:4px;
+    background-color: var(--gray30);
+    display: inline-block;
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+
+.pre-content {
+    background-color: #FEC62E;
+}
+
+pre {
+    /* background-color:#FEC62E; */
+    width: 80vw;
+    padding:40px;
+    font-family: "roboto";
+    line-height: 24px;
+    /* position:relative */
+}
+.main {
+    /* border: 1px solid red; */
+    /* background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent), url("/img/patron-1.png"); */
+}
+
+.wrapper {
+    width:902px;
+    margin:auto;
+}
+
+.main-container {
+    /* background-color: white; */
+    padding: 0 20px;
+}
+
+.hero {
+    background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent), url("/img/patron-1.png");
+    height:350px;
+
+}::selection {
+    background: #FEC62E;
+}
+
+.header-conteiner {
+    position:relative
+    
+}
+
+blockquote {
+    margin:32px 0;
+    padding:0 16px;
+    font-size: 24px;
+    border-left: 4px solid var(--gray30);
+    line-height: 24px;
+}
+
+blockquote span::before {
+    content:"-";
+}
+blockquote span {
+    color: var(--gray10);
+}
+
+.section-content + hr {
+    display: none;
+}
+
+.section-content {
+    margin-top:156px ;
+    position:relative;
+}
+
+.section-content:first-of-type {
+margin: 0;
+}
+
+.section-content img {
+ margin-top: 40px;
+}
+
+.section-content {
+    counter-reset: titlelist;
+}
+.section-content h3 {
+    counter-increment: titlelist;
+    padding-bottom: 8px;
+}
+
+.section-content h3::before {
+    content: counter(titlelist, decimal) ". ";
+}
+
+.section-content ul li{
+    margin: 16px;
+}
+
+.section-content ol li {
+    line-height: 24px;
+}
+
+nav details summary {
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.header {
+    position:sticky;
+    top:0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
